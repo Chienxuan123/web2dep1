@@ -60,7 +60,7 @@ export const AdminOverview: React.FC<AdminOverviewProps> = ({
             <span>Hệ thống Quản trị Doanh nghiệp Offline</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight">
-            XuanChien Store Admin Dashboard
+            Chien Admin Dashboard
           </h2>
           <p className="text-blue-100 text-xs sm:text-sm mt-2 leading-relaxed">
             Theo dõi tình hình kinh doanh, quản lý kho thời trang và xử lý đơn hàng nhanh chóng. 

@@ -18,7 +18,7 @@ export const AdminSettings: React.FC = () => {
   // Xuất file JSON sao lưu
   const handleExportJSON = () => {
     const backupData = {
-      store: 'XuanChien Fashion',
+      store: 'Chien',
       version: '1.0',
       exportedAt: new Date().toISOString(),
       products,
@@ -30,7 +30,7 @@ export const AdminSettings: React.FC = () => {
     downloadAnchor.setAttribute('href', dataStr);
     downloadAnchor.setAttribute(
       'download',
-      `xuanchien_backup_${new Date().toISOString().slice(0, 10)}.json`
+      `chien_backup_${new Date().toISOString().slice(0, 10)}.json`
     );
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();

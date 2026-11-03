@@ -138,7 +138,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const discountAmount = useMemo(() => {
     if (!appliedCoupon) return 0;
     const upperCode = appliedCoupon.toUpperCase().trim();
-    if (upperCode === 'XUANCHIEN10' || upperCode === 'VIETTHANG10') {
+    if (upperCode === 'CHIEN10' || upperCode === 'XUANCHIEN10' || upperCode === 'VIETTHANG10') {
       return Math.round(subtotal * 0.1);
     }
     if (upperCode === 'FASHION50' && subtotal >= 600000) {

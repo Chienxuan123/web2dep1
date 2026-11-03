@@ -16,10 +16,10 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-rose-500 text-white font-black flex items-center justify-center text-base">
-                XC
+                C
               </div>
               <span className="font-extrabold text-xl text-white tracking-tight">
-                XuanChien<span className="text-blue-500">.Fashion</span>
+                Chien
               </span>
             </div>
 
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                   }}
                   className="hover:text-white transition-colors"
                 >
-                  Về XuanChien Fashion
+                  Về Chien
                 </button>
               </li>
               <li>
@@ -137,7 +137,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
 
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <p>© 2026 XuanChien Fashion. Bản quyền thuộc về Công ty TNHH Thời Trang & May Mặc XuanChien.</p>
+          <p>© 2026 Chien. Bản quyền thuộc về Chien.</p>
           <p className="flex items-center gap-1">
             <span>Thiết kế thời trang & Vận hành với</span>
             <Heart className="w-3 h-3 text-rose-500 fill-rose-500" />

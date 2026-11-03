@@ -6,6 +6,6 @@
     </linearGradient>
   </defs>
   <rect width="100" height="100" rx="24" fill="url(#xcGrad)" />
-  <text x="50" y="65" font-family="Arial, sans-serif" font-size="45" font-weight="900" fill="#ffffff" text-anchor="middle">XC</text>
+  <text x="50" y="68" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>
   <circle cx="80" cy="24" r="6" fill="#f43f5e" />
 </svg>

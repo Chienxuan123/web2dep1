@@ -106,7 +106,7 @@ export const PRODUCTS: Product[] = [
       'Chất liệu': 'Lụa Mango loại 1 mềm mịn mát tay',
       'Chiều dài': 'Dáng midi ngang bắp chân',
       'Lót trong': 'Có lớp lót lụa habutai kín đáo',
-      'Xuất xứ': 'Thiết kế & sản xuất độc quyền XuanChien'
+      'Xuất xứ': 'Thiết kế & sản xuất độc quyền Chien'
     }
   },
   {
@@ -358,6 +358,12 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const VOUCHERS = [
+  {
+    code: 'CHIEN10',
+    description: 'Giảm ngay 10% trên tổng giá trị đơn hàng',
+    discountPercent: 10,
+    minSpend: 0,
+  },
   {
     code: 'XUANCHIEN10',
     description: 'Giảm ngay 10% trên tổng giá trị đơn hàng',

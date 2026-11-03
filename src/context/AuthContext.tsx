@@ -151,7 +151,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       name: 'Quản Trị Viên (Admin)',
       email: 'admin@xuanchienstore.vn',
       phone: '0988 888 999',
-      address: 'Trụ sở XuanChien Fashion, Hà Nội',
+      address: 'Trụ sở Chien, Hà Nội',
       role: 'admin',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
     };
