@@ -26,15 +26,15 @@ interface AuthContextType {
   closeHistoryModal: () => void;
 }
 
-const STORAGE_KEY_USER = 'vietthang_auth_user';
-const STORAGE_KEY_ORDERS = 'vietthang_user_orders';
+const STORAGE_KEY_USER = 'xuanchien_auth_user';
+const STORAGE_KEY_ORDERS = 'xuanchien_user_orders';
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { showToast } = useToast();
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY_USER);
+    const saved = localStorage.getItem(STORAGE_KEY_USER) || localStorage.getItem('vietthang_auth_user');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -84,6 +84,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const trimmed = usernameOrEmail.trim().toLowerCase();
     const isAttemptAdmin =
       trimmed === 'admin' ||
+      trimmed === 'admin@xuanchienstore.vn' ||
+      trimmed === 'admin@xuanchien.vn' ||
       trimmed === 'admin@vietthangstore.vn' ||
       trimmed === 'admin@vietthang.vn' ||
       trimmed === 'quantri';
@@ -105,7 +107,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     const emailValue = usernameOrEmail.includes('@')
       ? usernameOrEmail.trim()
-      : `${usernameOrEmail.trim().toLowerCase()}@vietthangstore.vn`;
+      : `${usernameOrEmail.trim().toLowerCase()}@xuanchienstore.vn`;
 
     const user: User = {
       id: 'usr_' + Date.now(),
@@ -129,7 +131,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
 
     const u = usernameOrEmail.trim().toLowerCase();
-    const validUsernames = ['admin', 'admin@vietthangstore.vn', 'admin@vietthang.vn', 'quantri'];
+    const validUsernames = [
+      'admin',
+      'admin@xuanchienstore.vn',
+      'admin@xuanchien.vn',
+      'admin@vietthangstore.vn',
+      'admin@vietthang.vn',
+      'quantri'
+    ];
     const validPasswords = ['admin', 'admin123', '123456'];
 
     if (!validUsernames.includes(u) || !validPasswords.includes(pass)) {
@@ -138,11 +147,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
 
     const adminUser: User = {
-      id: 'usr_admin_vietthang',
+      id: 'usr_admin_xuanchien',
       name: 'Quản Trị Viên (Admin)',
-      email: 'admin@vietthangstore.vn',
+      email: 'admin@xuanchienstore.vn',
       phone: '0988 888 999',
-      address: 'Trụ sở VietThang Fashion, Hà Nội',
+      address: 'Trụ sở XuanChien Fashion, Hà Nội',
       role: 'admin',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
     };
@@ -158,9 +167,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const loginDemo = () => {
     const demoUser: User = {
-      id: 'usr_demo_vietthang',
-      name: 'Nguyễn Văn Thắng (Khách hàng)',
-      email: 'demo@vietthangstore.vn',
+      id: 'usr_demo_xuanchien',
+      name: 'Nguyễn Xuân Chiến (Khách hàng)',
+      email: 'demo@xuanchienstore.vn',
       phone: '0912 345 678',
       address: 'Tòa nhà Landmark 81, 720A Điện Biên Phủ, TP. Hồ Chí Minh',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',

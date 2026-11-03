@@ -1,6 +1,6 @@
-# 👗 VietThang Fashion - Website Bán Quần Áo & Thời Trang Trực Tuyến (CI/CD & Docker & Render)
+# 👗 XuanChien Fashion - Website Bán Quần Áo & Thời Trang Trực Tuyến (CI/CD & Docker & Render)
 
-Dự án Website Bán Hàng Trực Tuyến chuyên kinh doanh **Quần Áo & Thời Trang Nam Nữ** cao cấp (**VietThang Fashion**), thiết kế chuẩn Single Page Application (SPA) trên nền tảng **React 18 + Vite + TypeScript + Tailwind CSS**, tích hợp quy trình tự động hóa **DevOps CI/CD**: **Docker Multi-stage**, **GitHub Actions** và Deploy lên **Render (Free Tier)**.
+Dự án Website Bán Hàng Trực Tuyến chuyên kinh doanh **Quần Áo & Thời Trang Nam Nữ** cao cấp (**XuanChien Fashion**), thiết kế chuẩn Single Page Application (SPA) trên nền tảng **React 18 + Vite + TypeScript + Tailwind CSS**, tích hợp quy trình tự động hóa **DevOps CI/CD**: **Docker Multi-stage**, **GitHub Actions** và Deploy lên **Render (Free Tier)**.
 
 ---
 
@@ -46,8 +46,8 @@ docker compose down
 ## 🌟 1. Tính Năng Giao Diện Thời Trang (UI/UX)
 
 1. **Thanh điều hướng (Navigation)**:
-   - Logo thương hiệu **VietThang.Fashion Designer**.
-   - Thanh thông báo mã voucher `VIETTHANG10` giảm 10%, miễn phí ship đơn từ 500k.
+   - Logo thương hiệu **XuanChien.Fashion Designer**.
+   - Thanh thông báo mã voucher `XUANCHIEN10` giảm 10%, miễn phí ship đơn từ 500k.
    - 3 mục chính: **Bộ sưu tập**, **Về thương hiệu**, **Liên hệ**.
    - Tìm kiếm quần áo theo thời gian thực (áo thun, sơ mi, blazer, đầm dự tiệc,...).
    - Túi đồ (Cart) kèm huy hiệu số lượng món hàng.
@@ -66,7 +66,7 @@ docker compose down
    - Hiển thị rõ Size và Màu đã chọn của từng món đồ.
    - Tăng/giảm số lượng, xóa món.
    - Nhập mã voucher:
-     - `VIETTHANG10`: Giảm 10% trên tổng đơn hàng.
+     - `XUANCHIEN10`: Giảm 10% trên tổng đơn hàng.
      - `FREESHIP`: Miễn phí vận chuyển cho đơn từ 500.000đ.
      - `FASHION50`: Giảm 50.000đ cho đơn từ 600.000đ.
 
@@ -106,7 +106,7 @@ Vào repository trên GitHub ➔ **Settings** ➔ **Secrets and variables** ➔ 
    - **Runtime**: Chọn `Docker`
    - **Instance Type**: `Free`
    - **Environment Variables**: Thêm `PORT` = `3000`
-4. Bấm **Create Web Service**. Ứng dụng sẽ tự động được build bằng Docker multi-stage và deploy ra đường link miễn phí dạng: `https://vietthang-fashion.onrender.com`.
+4. Bấm **Create Web Service**. Ứng dụng sẽ tự động được build bằng Docker multi-stage và deploy ra đường link miễn phí dạng: `https://xuanchien-fashion.onrender.com`.
 
 ---
 
@@ -114,12 +114,12 @@ Vào repository trên GitHub ➔ **Settings** ➔ **Secrets and variables** ➔ 
 
 - **Đăng nhập nhanh 1-Click**:
   - Bấm nút **Đăng nhập** trên góc phải ➔ Chọn **"Đăng nhập nhanh với tài khoản Demo"**.
-  - Tên: Nguyễn Văn Thắng (Demo)
-  - Email: `demo@vietthangstore.vn`
+  - Tên: Nguyễn Xuân Chiến (Demo)
+  - Email: `demo@xuanchienstore.vn`
 - **Mã Voucher thử nghiệm**:
-  - `VIETTHANG10` (Giảm 10%)
+  - `XUANCHIEN10` (Giảm 10%)
   - `FREESHIP` (Miễn phí ship đơn từ 500k)
   - `FASHION50` (Giảm 50k)
 
 ---
-*VietThang Fashion - Tự tin định hình phong cách thời trang của bạn!* ✨
+*XuanChien Fashion - Tự tin định hình phong cách thời trang của bạn!* ✨

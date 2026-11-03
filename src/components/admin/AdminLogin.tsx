@@ -87,7 +87,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onExit }) => {
             Đăng Nhập Admin
           </h2>
           <p className="text-xs text-slate-400 mt-1">
-            Yêu cầu tài khoản có quyền Quản trị viên để truy cập trang quản lý VietThang Store
+            Yêu cầu tài khoản có quyền Quản trị viên để truy cập trang quản lý XuanChien Store
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onExit }) => {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="admin hoặc admin@vietthangstore.vn"
+                placeholder="admin hoặc admin@xuanchienstore.vn"
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-xs sm:text-sm"
               />
               <UserIcon className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />

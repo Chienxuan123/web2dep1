@@ -15,7 +15,7 @@ interface ProductContextType {
   getProductById: (id: string) => Product | undefined;
 }
 
-const STORAGE_KEY_PRODUCTS = 'vietthang_products_data';
+const STORAGE_KEY_PRODUCTS = 'xuanchien_products_data';
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
@@ -23,7 +23,7 @@ export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const { showToast } = useToast();
 
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY_PRODUCTS);
+    const saved = localStorage.getItem(STORAGE_KEY_PRODUCTS) || localStorage.getItem('vietthang_products_data');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);

@@ -27,8 +27,8 @@ interface CartContextType {
   setSelectedProductForDetail: (product: Product | null) => void;
 }
 
-const STORAGE_KEY_CART = 'vietthang_fashion_cart';
-const STORAGE_KEY_COUPON = 'vietthang_applied_coupon';
+const STORAGE_KEY_CART = 'xuanchien_fashion_cart';
+const STORAGE_KEY_COUPON = 'xuanchien_applied_coupon';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
@@ -36,7 +36,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const { showToast } = useToast();
 
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY_CART);
+    const saved = localStorage.getItem(STORAGE_KEY_CART) || localStorage.getItem('vietthang_fashion_cart');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -48,7 +48,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [appliedCoupon, setAppliedCoupon] = useState<string | null>(() => {
-    return localStorage.getItem(STORAGE_KEY_COUPON) || null;
+    return localStorage.getItem(STORAGE_KEY_COUPON) || localStorage.getItem('vietthang_applied_coupon') || null;
   });
 
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -138,7 +138,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const discountAmount = useMemo(() => {
     if (!appliedCoupon) return 0;
     const upperCode = appliedCoupon.toUpperCase().trim();
-    if (upperCode === 'VIETTHANG10') {
+    if (upperCode === 'XUANCHIEN10' || upperCode === 'VIETTHANG10') {
       return Math.round(subtotal * 0.1);
     }
     if (upperCode === 'FASHION50' && subtotal >= 600000) {

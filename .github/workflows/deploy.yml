@@ -26,10 +26,14 @@ jobs:
       - name: 4. Build Docker image
         run: |
           docker build \
+            -t ${{ secrets.DOCKER_USERNAME }}/xuanchien-fashion:latest \
+            -t ${{ secrets.DOCKER_USERNAME }}/xuanchien-fashion:${{ github.sha }} \
             -t ${{ secrets.DOCKER_USERNAME }}/vietthang-fashion:latest \
             -t ${{ secrets.DOCKER_USERNAME }}/vietthang-fashion:${{ github.sha }} .
 
       - name: 5. Push Docker image
         run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/xuanchien-fashion:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/xuanchien-fashion:${{ github.sha }}
           docker push ${{ secrets.DOCKER_USERNAME }}/vietthang-fashion:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/vietthang-fashion:${{ github.sha }}
